@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="GoFAR3" package="GoFAR3" version="1.0.0" company="wuey99" />
+	
+	<!-- output -->
+	<app main="Main" file="GoFAR3" path="bin" />
+	
+	<window background="#000000" fps="60" />
+	<window width="962" height="600" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<source path="src" />
+	<source path="../kx/src"></source>
+	<haxelib name="openfl" />
+	<haxelib name="swf" version="2.3.1" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" />
+	<library path="src\\assets\\Assets.swf" preload="true" generate="true" />
+	<library path="src\\assets\\fireworks.swf" preload="true" generate="true" />
+	<library path="src\\assets\\character_standing.swf" preload="true" generate="true" />
+	<library path="src\\assets\\character_walking_ready.swf" preload="true" generate="true" />
+	<library path="src\\assets\\Bee.swf" preload="true" generate="true" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>

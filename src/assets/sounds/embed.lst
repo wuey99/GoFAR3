@@ -1,0 +1,192 @@
+[Embed(source="Sounds/Add this step to the plan.mp3")]
+public static const AddThisStepToThePlan:Class;
+
+[Embed(source="Sounds/Can you copy my plan.mp3")]
+public static const CanYouCopyMyPlan:Class;
+
+[Embed(source="Sounds/Catch all the stars.mp3")]
+public static const CatchAllTheStars:Class;
+
+[Embed(source="Sounds/check your plan first and try again.mp3")]
+public static const CheckYourPlanFirstAndTryAgain:Class;
+
+[Embed(source="Sounds/Check your plan.mp3")]
+public static const CheckYourPlan:Class;
+
+[Embed(source="Sounds/Choose the first step.mp3")]
+public static const ChooseTheFirstStep:Class;
+
+[Embed(source="Sounds/Click on the images on the screen that follow the plan.mp3")]
+public static const ClickOnTheImagesOnTheScreenThatFollowThePlan:Class;
+
+[Embed(source="Sounds/climb the ladder.mp3")]
+public static const ClimbTheLadder:Class;
+
+[Embed(source="Sounds/Do this next.mp3")]
+public static const DoThisNext:Class;
+
+[Embed(source="Sounds/Follow your plan.mp3")]
+public static const FollowYourPlan:Class;
+
+[Embed(source="Sounds/get the key.mp3")]
+public static const GetTheKey:Class;
+
+[Embed(source="Sounds/Good job.mp3")]
+public static const GoodJob:Class;
+
+[Embed(source="Sounds/Help me get the key and open the door.mp3")]
+public static const HelpMeGetTheKeyAndOpenTheDoor:Class;
+
+[Embed(source="Sounds/I can't do that yet.mp3")]
+public static const ICantDoThatYet:Class;
+
+[Embed(source="Sounds/I don't remember doing that.mp3")]
+public static const IDontRememberDoingThat:Class;
+
+[Embed(source="Sounds/I need to do this next.mp3")]
+public static const INeedToDoThisNext:Class;
+
+[Embed(source="Sounds/I really need to do this next.mp3")]
+public static const IReallyNeedToDoThisNext:Class;
+
+[Embed(source="Sounds/Jump over the pit.mp3")]
+public static const JumpOverThePit:Class;
+
+[Embed(source="Sounds/Let's focus and plan.mp3")]
+public static const LetsFocusAndPlan:Class;
+
+[Embed(source="Sounds/let's follow the plan.mp3")]
+public static const LetsFollowThePlan:Class;
+
+[Embed(source="Sounds/Lets remember our adventure.mp3")]
+public static const LetsRememberOurAdventure:Class;
+
+[Embed(source="Sounds/lets start over and follow our plan.mp3")]
+public static const LetsStartOverAndFollowOurPlan:Class;
+
+[Embed(source="Sounds/Look at the plan.mp3")]
+public static const LookAtThePlan:Class;
+
+[Embed(source="Sounds/Make a plan for yourself.mp3")]
+public static const MakeAPlanForYourself:Class;
+
+[Embed(source="Sounds/not yet.mp3")]
+public static const NotYet:Class;
+
+[Embed(source="Sounds/Now I know what to do, watch me.mp3")]
+public static const NowIKnowWhatToDoWatchMe:Class;
+
+[Embed(source="Sounds/Open the door.mp3")]
+public static const OpenTheDoor:Class;
+
+[Embed(source="Sounds/Reflect on what we did.mp3")]
+public static const ReflectOnWhatWeDid:Class;
+
+[Embed(source="Sounds/remember what our steps were.mp3")]
+public static const RememberWhatOurStepsWere:Class;
+
+[Embed(source="Sounds/Remember what we did.mp3")]
+public static const RememberWhatWeDid:Class;
+
+[Embed(source="Sounds/Remind me what we did.mp3")]
+public static const RemindMeWhatWeDid:Class;
+
+[Embed(source="Sounds/Show me the next step.mp3")]
+public static const ShowMeTheNextStep:Class;
+
+[Embed(source="Sounds/squish the monster.mp3")]
+public static const SquishTheMonster:Class;
+
+[Embed(source="Sounds/Tell me what we did again.mp3")]
+public static const TellMeWhatWeDidAgain:Class;
+
+[Embed(source="Sounds/Thanks, watch me do your plan.mp3")]
+public static const ThanksWatchMeDoYourPlan:Class;
+
+[Embed(source="Sounds/thanks, you helped me.mp3")]
+public static const ThanksYouHelpedMe:Class;
+
+[Embed(source="Sounds/thanks, you showed me how to do it.mp3")]
+public static const ThanksYouShowedMeHowToDoIt:Class;
+
+[Embed(source="Sounds/This is a step in my plan.mp3")]
+public static const ThisIsAStepInMyPlan:Class;
+
+[Embed(source="Sounds/This is how you make a plan.mp3")]
+public static const ThisIsHowYouMakeAPlan:Class;
+
+[Embed(source="Sounds/This is my plan.mp3")]
+public static const ThisIsMyPlan:Class;
+
+[Embed(source="Sounds/Time for action.mp3")]
+public static const TimeForAction:Class;
+
+[Embed(source="Sounds/Try again.mp3")]
+public static const TryAgain:Class;
+
+[Embed(source="Sounds/Try this next.mp3")]
+public static const TryThisNext:Class;
+
+[Embed(source="Sounds/Use the arrow keys to move.mp3")]
+public static const UseTheArrowKeysToMove:Class;
+
+[Embed(source="Sounds/Use the space bar to jump.mp3")]
+public static const UseTheSpaceBarToJump:Class;
+
+[Embed(source="Sounds/Use the up arrow to climb.mp3")]
+public static const UseTheUpArrowToClimb:Class;
+
+[Embed(source="Sounds/Way to go.mp3")]
+public static const WayToGo:Class;
+
+[Embed(source="Sounds/What do I do before this.mp3")]
+public static const WhatDoIDoBeforeThis:Class;
+
+[Embed(source="Sounds/What do I do first.mp3")]
+public static const WhatDoIDoFirst:Class;
+
+[Embed(source="Sounds/What do I do next.mp3")]
+public static const WhatDoIDoNext:Class;
+
+[Embed(source="Sounds/What do you do first.mp3")]
+public static const WhatDoYouDoFirst:Class;
+
+[Embed(source="Sounds/What happens next.mp3")]
+public static const WhatHappensNext:Class;
+
+[Embed(source="Sounds/What is the first step.mp3")]
+public static const WhatIsTheFirstStep:Class;
+
+[Embed(source="Sounds/What is the next step to get the key and open the door.mp3")]
+public static const WhatIsTheNextStepToGetTheKeyAndOpenTheDoor:Class;
+
+[Embed(source="Sounds/What is the Next step to get to the door.mp3")]
+public static const WhatIsTheNextStepToGetToTheDoor:Class;
+
+[Embed(source="Sounds/What is the NEXT step to help me get to the door.mp3")]
+public static const WhatIsTheNEXTStepToHelpMeGetToTheDoor:Class;
+
+[Embed(source="Sounds/what is the next step.mp3")]
+public static const WhatIsTheNextStep:Class;
+
+[Embed(source="Sounds/What is the plan.mp3")]
+public static const WhatIsThePlan:Class;
+
+[Embed(source="Sounds/What was our next step.mp3")]
+public static const WhatWasOurNextStep:Class;
+
+[Embed(source="Sounds/Where do I go next.mp3")]
+public static const WhereDoIGoNext:Class;
+
+[Embed(source="Sounds/Wrong choice.mp3")]
+public static const WrongChoice:Class;
+
+[Embed(source="Sounds/You aren't following the plan let's start again.mp3")]
+public static const YouArentFollowingThePlanLetsStartAgain:Class;
+
+[Embed(source="Sounds/you arent following the plan lets start again.mp3")]
+public static const YouArentFollowingThePlanLetsStartAgain:Class;
+
+[Embed(source="Sounds/You got it right.mp3")]
+public static const YouGotItRight:Class;
+

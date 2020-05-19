@@ -1,0 +1,120 @@
+[Embed(source="Sounds2/AddTheNextStepToThePlan.mp3")]
+public static const AddTheNextStepToThePlan:Class;
+[Embed(source="Sounds2/AddThisStepToThePlan.mp3")]
+public static const AddThisStepToThePlan:Class;
+[Embed(source="Sounds2/AreYouReadyToDoTheStepsInYourPlanToAct.mp3")]
+public static const AreYouReadyToDoTheStepsInYourPlanToAct:Class;
+[Embed(source="Sounds2/CheckYourPlan.mp3")]
+public static const CheckYourPlan:Class;
+[Embed(source="Sounds2/CheckYourPlanFirstAndTryAgain.mp3")]
+public static const CheckYourPlanFirstAndTryAgain:Class;
+[Embed(source="Sounds2/ChooseTheFirstStep.mp3")]
+public static const ChooseTheFirstStep:Class;
+[Embed(source="Sounds2/ClickOnTheStepsToGetTheKey.mp3")]
+public static const ClickOnTheStepsToGetTheKey:Class;
+[Embed(source="Sounds2/ClickStartWhenYouAreReady.mp3")]
+public static const ClickStartWhenYouAreReady:Class;
+[Embed(source="Sounds2/ClimbTheLadder.mp3")]
+public static const ClimbTheLadder:Class;
+[Embed(source="Sounds2/DoThisNext.mp3")]
+public static const DoThisNext:Class;
+[Embed(source="Sounds2/EachStepInThePlanHasAStar.mp3")]
+public static const EachStepInThePlanHasAStar:Class;
+[Embed(source="Sounds2/FocusMeansLookingAndListeningCarefully.mp3")]
+public static const FocusMeansLookingAndListeningCarefully:Class;
+[Embed(source="Sounds2/ForTheLastPartClickOnTheStepsToReflectOnWhatYouDid.mp3")]
+public static const ForTheLastPartClickOnTheStepsToReflectOnWhatYouDid:Class;
+[Embed(source="Sounds2/GetTheKey.mp3")]
+public static const GetTheKey:Class;
+[Embed(source="Sounds2/GetTheKeyOpenTheDoor.mp3")]
+public static const GetTheKeyOpenTheDoor:Class;
+[Embed(source="Sounds2/GoodJob.mp3")]
+public static const GoodJob:Class;
+[Embed(source="Sounds2/GoodJobYouAreFarSmart.mp3")]
+public static const GoodJobYouAreFarSmart:Class;
+[Embed(source="Sounds2/HelpMeGetTheKeyAndOpenTheDoor.mp3")]
+public static const HelpMeGetTheKeyAndOpenTheDoor:Class;
+[Embed(source="Sounds2/ICantDoThatYet.mp3")]
+public static const ICantDoThatYet:Class;
+[Embed(source="Sounds2/IDontRememberDoingThat.mp3")]
+public static const IDontRememberDoingThat:Class;
+[Embed(source="Sounds2/INeedToDoThisNext.mp3")]
+public static const INeedToDoThisNext:Class;
+[Embed(source="Sounds2/IReallyNeedToDoThisNext.mp3")]
+public static const IReallyNeedToDoThisNext:Class;
+[Embed(source="Sounds2/JumpOverThePit.mp3")]
+public static const JumpOverThePit:Class;
+[Embed(source="Sounds2/LetsFocusAndPlan.mp3")]
+public static const LetsFocusAndPlan:Class;
+[Embed(source="Sounds2/LetsFollowThePlan.mp3")]
+public static const LetsFollowThePlan:Class;
+[Embed(source="Sounds2/LetsRememberOurAdventure.mp3")]
+public static const LetsRememberOurAdventure:Class;
+[Embed(source="Sounds2/LetsStartWithTheFirstLetterInFar.mp3")]
+public static const LetsStartWithTheFirstLetterInFar:Class;
+[Embed(source="Sounds2/LookAtThePlan.mp3")]
+public static const LookAtThePlan:Class;
+[Embed(source="Sounds2/MoveUsingTheArrowKeys.mp3")]
+public static const MoveUsingTheArrowKeys:Class;
+[Embed(source="Sounds2/NowFocusOnTheGameAndMakeAPlan.mp3")]
+public static const NowFocusOnTheGameAndMakeAPlan:Class;
+[Embed(source="Sounds2/NowYouHaveMadeAPlan.mp3")]
+public static const NowYouHaveMadeAPlan:Class;
+[Embed(source="Sounds2/ReflectOnWhatWeDid.mp3")]
+public static const ReflectOnWhatWeDid:Class;
+[Embed(source="Sounds2/RememberWhatOurStepsWere.mp3")]
+public static const RememberWhatOurStepsWere:Class;
+[Embed(source="Sounds2/RememberWhatWeDid.mp3")]
+public static const RememberWhatWeDid:Class;
+[Embed(source="Sounds2/RemindMeWhatWeDid.mp3")]
+public static const RemindMeWhatWeDid:Class;
+[Embed(source="Sounds2/ShowMeTheNextStep.mp3")]
+public static const ShowMeTheNextStep:Class;
+[Embed(source="Sounds2/Start.mp3")]
+public static const Start:Class;
+[Embed(source="Sounds2/ThereIsSomethingYouNeedToDoFirstWhatIsIt.mp3")]
+public static const ThereIsSomethingYouNeedToDoFirstWhatIsIt:Class;
+[Embed(source="Sounds2/ThereWillBeASurpriseBehindTheDoor.mp3")]
+public static const ThereWillBeASurpriseBehindTheDoor:Class;
+[Embed(source="Sounds2/TimeForAction.mp3")]
+public static const TimeForAction:Class;
+[Embed(source="Sounds2/TryAgain.mp3")]
+public static const TryAgain:Class;
+[Embed(source="Sounds2/TryThisNext.mp3")]
+public static const TryThisNext:Class;
+[Embed(source="Sounds2/WayToGo.mp3")]
+public static const WayToGo:Class;
+[Embed(source="Sounds2/WeCallOurGameFar.mp3")]
+public static const WeCallOurGameFar:Class;
+[Embed(source="Sounds2/WhatDoIDoBeforeThis.mp3")]
+public static const WhatDoIDoBeforeThis:Class;
+[Embed(source="Sounds2/WhatDoIDoFirst.mp3")]
+public static const WhatDoIDoFirst:Class;
+[Embed(source="Sounds2/WhatDoIDoNext.mp3")]
+public static const WhatDoIDoNext:Class;
+[Embed(source="Sounds2/WhatHappensNext.mp3")]
+public static const WhatHappensNext:Class;
+[Embed(source="Sounds2/WhatIsTheNextStep.mp3")]
+public static const WhatIsTheNextStep:Class;
+[Embed(source="Sounds2/WhatIsTheNextStepToGetTheKeyAndOpenTheDoor.mp3")]
+public static const WhatIsTheNextStepToGetTheKeyAndOpenTheDoor:Class;
+[Embed(source="Sounds2/WhatIsTheNextStepToGetToTheDoor.mp3")]
+public static const WhatIsTheNextStepToGetToTheDoor:Class;
+[Embed(source="Sounds2/WhatIsTheNEXTStepToHelpMeGetToTheDoor.mp3")]
+public static const WhatIsTheNEXTStepToHelpMeGetToTheDoor:Class;
+[Embed(source="Sounds2/WhatIsThePlan.mp3")]
+public static const WhatIsThePlan:Class;
+[Embed(source="Sounds2/WhatWasOurNextStep.mp3")]
+public static const WhatWasOurNextStep:Class;
+[Embed(source="Sounds2/WhenYouMakeAPlanYouThinkAboutWhatYouAreGoingToDo.mp3")]
+public static const WhenYouMakeAPlanYouThinkAboutWhatYouAreGoingToDo:Class;
+[Embed(source="Sounds2/WhereDoIGoNext.mp3")]
+public static const WhereDoIGoNext:Class;
+[Embed(source="Sounds2/YouAreAWinner.mp3")]
+public static const YouAreAWinner:Class;
+[Embed(source="Sounds2/YouArentFollowingThePlanLetsStartAgain.mp3")]
+public static const YouArentFollowingThePlanLetsStartAgain:Class;
+[Embed(source="Sounds2/YouGotItRight.mp3")]
+public static const YouGotItRight:Class;
+[Embed(source="Sounds2/YouWonFarOut.mp3")]
+public static const YouWonFarOut:Class;
