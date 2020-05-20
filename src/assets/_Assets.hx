@@ -35,7 +35,7 @@ package assets;
 		}
 		
 //------------------------------------------------------------------------------------------
-		public override function load ():Bool {	
+		public override function load ():Bool {
 			return m_XApp.cacheAllClasses (_EmbeddedAssets.getProjectXML ());
 		}
 			

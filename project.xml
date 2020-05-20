@@ -19,8 +19,6 @@
 	<haxelib name="actuate" />
 	
 	<!-- assets -->
-	<icon path="assets/openfl.svg" />
-	<assets path="assets/img" rename="img" />
 	<library path="src\\assets\\Assets.swf" preload="true" generate="true" />
 	<library path="src\\assets\\fireworks.swf" preload="true" generate="true" />
 	<library path="src\\assets\\character_standing.swf" preload="true" generate="true" />

@@ -49,7 +49,7 @@ class _EmbeddedAssets {
 						"<manifest>" +
 						
 							"<folder name=\"root\">" +
-							
+												
 								"<resource name=\"Assets\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"Assets.fla\" dst=\"Assets.swf\">" +
 									"<classX name=\"BeeClass\"/>" +
 									"<classX name=\"CircleClass\"/>" +																																																																																																																			
@@ -151,7 +151,7 @@ class _EmbeddedAssets {
 									"<classX name=\"PointyArrowClass\"/>" +
 									"<classX name=\"SamplePlanClass\"/>" +
 								"</resource>" +
-
+							
 								"<resource name=\"CharacterStanding\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"character_standing.fla\" dst=\"character_standing.swf\">" +
 									"<classX name=\"Standing\"/>" +	
 								"</resource>" +
@@ -159,16 +159,12 @@ class _EmbeddedAssets {
 								"<resource name=\"CharacterWalking\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"character_walking_ready.fla\" dst=\"character_walking_ready.swf\">" +
 									"<classX name=\"Walking\"/>" +	
 								"</resource>" +
-
+							
 								"<resource name=\"Bee\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"Bee.fla\" dst=\"Bee.swf\">" +
 									"<classX name=\"BeeClass\"/>" +
 									"<classX name=\"BeeClassX\"/>" +
 								"</resource>" +
-
-								"<resource name=\"fireworks\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"fireworks.fla\" dst=\"fireworks.swf\">" +
-									"<classX name=\"complete\"/>" +
-								"</resource>" +
-																																
+								
 							"</folder>" +
 							
 						"</manifest>" +						
@@ -182,46 +178,28 @@ public static function getProjectXML ():XSimpleXMLNode {
 
 //------------------------------------------------------------------------------------------
 public static function addEmbeddedAssets (__XApp:XApp):Void {
-		#if false
-			m_XApp.getProjectManager ().addEmbeddedResource (
-				"$FAR\\Embedded\\Assets.swf", XAssets.AssetsBytesClass
-			);
-			
-			m_XApp.getProjectManager ().addEmbeddedResource (
-				"$FAR\\Embedded\\character_standing.swf", XAssets.CharacterStandingBytesClass
-			);
-
-			m_XApp.getProjectManager ().addEmbeddedResource (
-				"$FAR\\Embedded\\character_walking_ready.swf", XAssets.CharacterWalkingBytesClass
-			);
-			
-			m_XApp.getProjectManager ().addEmbeddedResource (
-				"$FAR\\Embedded\\Bee.swf", XAssets.BeeClass
-			);
-
-			m_XApp.getProjectManager ().addEmbeddedResource (
-				"$FAR\\Embedded\\fireworks.swf", XAssets.FireworksBytesClass
-			);
-		#end
-		
 		__XApp.getProjectManager ().addEmbeddedResource (
-			"$FAR\\Embedded\\Assets.swf" , AssetsBytesClass
+			"BeeClass" , BeeClass
 		);
 		
 		__XApp.getProjectManager ().addEmbeddedResource (
-			"$FAR\\Embedded\\character_standing.swf" , CharacterStandingBytesClass
+			"$FAR\\Embedded\\Assets.swf" , CircleClass
 		);
 		
 		__XApp.getProjectManager ().addEmbeddedResource (
-			"$FAR\\Embedded\\character_walking_ready.swf" , CharacterWalkingBytesClass
+			"$FAR\\Embedded\\Assets.swf" , Level001_AClass
 		);
 		
 		__XApp.getProjectManager ().addEmbeddedResource (
-			"$FAR\\Embedded\\Bee.swf" , BeeBytesClass
+			"$FAR\\Embedded\\character_standing.swf" , Standing
 		);
-	
+		
 		__XApp.getProjectManager ().addEmbeddedResource (
-			"$FAR\\Embedded\\fireworks.swf" , FireworksBytesClass
+			"$FAR\\Embedded\\character_walking_ready.swf" , Walking
+		);
+		
+		__XApp.getProjectManager ().addEmbeddedResource (
+			"$FAR\\Embedded\\Bee.swf" , BeeClassX
 		);
 	}
 
