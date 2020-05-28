@@ -16,9 +16,9 @@ class Main extends Sprite
         trace(": starting: ");
         
         var __game:Game = new Game ();
-        __game.setup (_Assets, null, this);
         addChild (__game);
-        
+        __game.setup (_Assets, null, this);
+		
         // Assets:
         // openfl.Assets.getBitmapData("img/assetname.jpg");
     }
