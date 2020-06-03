@@ -13,6 +13,8 @@ package;
 	import objects.mickey.*;
 	import objects.obstacles.*;
 	
+	import xlogicobject.*;
+	
 	import sound.*;
 	
 	import ui.*;
@@ -28,6 +30,7 @@ package;
 	import kx.geom.*;
 	import kx.keyboard.*;
 	import kx.resource.*;
+	import kx.texture.*;
 	import kx.sound.*;
 	import kx.task.*;
 	import kx.type.*;
@@ -62,7 +65,7 @@ package;
 		public static inline var OBJECT_BEE:Int = 6;
 		
 		public static inline var SENSOR_JUMPPIT:Int = 7;
-		public static var SENSOR_CLIMBLADDER:Int = 8;
+		public static inline var SENSOR_CLIMBLADDER:Int = 8;
 		
 		public static inline var STAGE_PLAN:Int = 1;
 		public static inline var STAGE_PLAY:Int = 2;
@@ -114,6 +117,8 @@ package;
 			mask = m_panelMask;
 			addChild (m_panelMask);
 			
+			cacheAllMovieClips ();
+			
 			xxx.getXTaskManager ().addTask ([
 				XTask.LABEL, "loop",
 				XTask.WAIT, 0x0100,
@@ -133,9 +138,7 @@ package;
 				function ():Void {	
 					trace (": ---------------->: xyzzy: ", xxx.getClass ("Assets:Level001_AClass"));
 					
-					trace (": ", XType.createInstance (xxx.getClass ("Assets:BeeClass")));
-					
-					// initGameController ();
+					initGameController ();
 				},
 				
 				XTask.RETN,
@@ -158,6 +161,21 @@ package;
 				// scale, rotation
 				1.0, 0
 			) /* as GameControllerX */;
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function cacheAllMovieClips ():Void {
+			var t:XSubTextureManager = xxx.getTextureManager ().createSubManager ("__global__");
+			
+			t.start ();
+			
+			XType.forEach (m_XApp.getAllClassNames (), 
+				function (x:Dynamic /* */):Void {
+					t.add (cast(x, String) );					
+				}
+			);
+			
+			t.finish ();
 		}
 		
 		//------------------------------------------------------------------------------------------
@@ -241,7 +259,7 @@ package;
 		}
 		
 		//------------------------------------------------------------------------------------------
-		public function getOptionsButton ():XButton {
+		public function getOptionsButton ():__XButton {
 			return m_gameController.getScoreAndOptions ().getOptionsButton ();	
 		}
 		

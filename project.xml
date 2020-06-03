@@ -20,11 +20,13 @@
 	
 	<!-- assets -->
 	<library path="src\\assets\\Assets.swf" preload="true" generate="true" />
-	<library path="src\\assets\\fireworks.swf" preload="true" generate="true" />
+	<!-- library path="src\\assets\\fireworks.swf" preload="true" generate="true" / -->
 	<library path="src\\assets\\character_standing.swf" preload="true" generate="true" />
 	<library path="src\\assets\\character_walking_ready.swf" preload="true" generate="true" />
 	<library path="src\\assets\\Bee.swf" preload="true" generate="true" />
-	
+	<assets path="src/assets/sounds2" rename="sounds" />
+	<assets path="src/assets" rename="fonts" include="*.ttf" />
+
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->
 	
