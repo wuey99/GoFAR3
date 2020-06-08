@@ -32,6 +32,8 @@ package levels;
 	
 	import sound.*;
 	
+	import interfaces.*;
+	
 //------------------------------------------------------------------------------------------
 	class LevelX extends XLogicObject {
 		public var x_sprite:XDepthSprite;
@@ -61,6 +63,12 @@ package levels;
 		
 		private static var m_standardVoiceDelay:Float = .5*1000;
 		
+		private var m_dpadButtonLeft:DPadButtonLeftX;
+		private var m_dpadButtonRight:DPadButtonRightX;
+		private var m_dpadButtonUp:DPadButtonUpX;
+		private var m_dpadButtonDown:DPadButtonDownX;
+		private var m_dpadButtonJump:DPadButtonJumpX;
+		
 //------------------------------------------------------------------------------------------
 		public function new () {
 			super ();
@@ -85,6 +93,8 @@ package levels;
 			xm = new XSoundTaskSubManager (
 				G.app.getXSoundTaskManager (), G.app.getOldSoundManager ()
 			);
+			
+			createDPadButtons (96, 550);
 		}
 
 //------------------------------------------------------------------------------------------
@@ -961,7 +971,7 @@ package levels;
 					]);
 				},
 				*/
-								
+	
 				XTask.LABEL, "loop",		
 					function ():Void {
 						__planModel = getPlans ()[m_currPlanIndex];
@@ -972,7 +982,7 @@ package levels;
 					},
 	
 					XTask.EXEC, __waitForGoal (),
-		
+					
 					function ():Void {						
 						__planModel.iconObject.Finished_Script ();
 							
@@ -1419,6 +1429,169 @@ package levels;
 			]);
 		}
 
+//------------------------------------------------------------------------------------------
+	public function createDPadButtons (__x:Float, __y:Float):Void {
+		m_dpadButtonLeft = cast xxx.getXLogicManager ().initXLogicObject (
+			// parent
+			self,
+			// logicObject
+			new DPadButtonLeftX () /* as XLogicObject */,
+			// item, layer, depth
+			null, 0, 999999,
+			// x, y, z
+			__x, __y, 0,
+			// scale, rotation
+			1.0, 0,
+			[
+				self
+			]
+		) /* as DPadButtonLeftX */;
+		
+		addXLogicObject (m_dpadButtonLeft);
+		
+		m_dpadButtonRight = cast xxx.getXLogicManager ().initXLogicObject (
+			// parent
+			self,
+			// logicObject
+			new DPadButtonRightX () /* as XLogicObject */,
+			// item, layer, depth
+			null, 0, 999999,
+			// x, y, z
+			__x + 100, __y, 0,
+			// scale, rotation
+			1.0, 0,
+			[
+				self
+			]
+		) /* as DPadButtonRightX */;
+		
+		addXLogicObject (m_dpadButtonRight);
+		
+		m_dpadButtonUp = cast xxx.getXLogicManager ().initXLogicObject (
+			// parent
+			self,
+			// logicObject
+			new DPadButtonUpX () /* as XLogicObject */,
+			// item, layer, depth
+			null, 0, 999999,
+			// x, y, z
+			__x + 200, __y, 0,
+			// scale, rotation
+			1.0, 0,
+			[
+				self
+			]
+		) /* as DPadButtonUpX */;
+		
+		addXLogicObject (m_dpadButtonUp);
+		
+		m_dpadButtonDown = cast xxx.getXLogicManager ().initXLogicObject (
+			// parent
+			self,
+			// logicObject
+			new DPadButtonDownX () /* as XLogicObject */,
+			// item, layer, depth
+			null, 0, 999999,
+			// x, y, z
+			__x + 300, __y, 0,
+			// scale, rotation
+			1.0, 0,
+			[
+				self
+			]
+		) /* as DPadButtonDownX */;
+		
+		addXLogicObject (m_dpadButtonDown);
+		
+		m_dpadButtonJump = cast xxx.getXLogicManager ().initXLogicObject (
+			// parent
+			self,
+			// logicObject
+			new DPadButtonJumpX () /* as XLogicObject */,
+			// item, layer, depth
+			null, 0, 999999,
+			// x, y, z
+			__x + 400, __y, 0,
+			// scale, rotation
+			1.0, 0,
+			[
+				self
+			]
+		) /* as DPadButtonJumpX */;
+		
+		addXLogicObject (m_dpadButtonJump);
+	}
+
+//------------------------------------------------------------------------------------------
+		public function addDPadButtonUpPressedListener (__listener:Dynamic /* Function */):Void {	
+			if (m_dpadButtonUp != null) {
+				m_dpadButtonUp.addPressedListener (__listener);
+			}
+		}
+		
+//------------------------------------------------------------------------------------------
+		public function addDPadButtonDownPressedListener (__listener:Dynamic /* Function */):Void {
+			if (m_dpadButtonDown != null) {
+				m_dpadButtonDown.addPressedListener (__listener);
+			}
+		}
+		
+//------------------------------------------------------------------------------------------
+		public function addDPadButtonLeftPressedListener (__listener:Dynamic /* Function */):Void {
+			if (m_dpadButtonLeft != null) {
+				m_dpadButtonLeft.addPressedListener (__listener);
+			}
+		}
+		
+//------------------------------------------------------------------------------------------
+		public function addDPadButtonRightPressedListener (__listener:Dynamic /* Function */):Void {	
+			if (m_dpadButtonRight != null) {
+				m_dpadButtonRight.addPressedListener (__listener);
+			}
+		}
+		
+//------------------------------------------------------------------------------------------
+		public function addDPadButtonJumpPressedListener (__listener:Dynamic /* Function */):Void {
+			if (m_dpadButtonJump != null) {
+				m_dpadButtonJump.addPressedListener (__listener);
+			}
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function addDPadButtonUpReleasedListener (__listener:Dynamic /* Function */):Void {	
+			if (m_dpadButtonUp != null) {
+				m_dpadButtonUp.addReleasedListener (__listener);
+			}
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function addDPadButtonDownReleasedListener (__listener:Dynamic /* Function */):Void {
+			if (m_dpadButtonDown != null) {
+				m_dpadButtonDown.addReleasedListener (__listener);
+			}
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function addDPadButtonLeftReleasedListener (__listener:Dynamic /* Function */):Void {
+			if (m_dpadButtonLeft != null) {
+				m_dpadButtonLeft.addReleasedListener (__listener);
+			}
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function addDPadButtonRightReleasedListener (__listener:Dynamic /* Function */):Void {	
+			if (m_dpadButtonRight != null) {
+				m_dpadButtonRight.addReleasedListener (__listener);
+			}
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function addDPadButtonJumpReleasedListener (__listener:Dynamic /* Function */):Void {
+			if (m_dpadButtonJump != null) {
+				m_dpadButtonJump.addReleasedListener (__listener);
+			}
+		}
+		
 //------------------------------------------------------------------------------------------
 		public function createWinX ():Void {
 			cast xxx.getXLogicManager ().initXLogicObject (

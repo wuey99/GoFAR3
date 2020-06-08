@@ -188,6 +188,11 @@ package assets;
 		"<classX name=\"FireworksParticle_Red\"/>" +
 		"<classX name=\"FireworksParticle_Green\"/>" +
 		"<classX name=\"FireworksParticle_Blue\"/>" +
+		"<classX name=\"DPadLeftClass\"/>" +
+		"<classX name=\"DPadRightClass\"/>" +
+		"<classX name=\"DPadUpClass\"/>" +
+		"<classX name=\"DPadDownClass\"/>" +
+		"<classX name=\"DPadJumpClass\"/>" +
 		"</resource>" +
 		
 		"<resource name=\"CharacterStanding\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"character_standing.fla\" dst=\"character_standing.swf\">" +

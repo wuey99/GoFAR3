@@ -11,6 +11,7 @@ package objects.mickey;
 	
 	import kx.*;
 	import kx.geom.*;
+	import kx.collections.*;
 	import kx.task.*;
 	import kx.world.*;
 	import kx.world.collision.*;
@@ -34,7 +35,8 @@ package objects.mickey;
 		public var m_beeGotoScript:Dynamic /* Function */;
 		public var m_lilKey:XLogicObject;
 		public var m_sprite:XMovieClip;
-				
+		public var m_dpadKeys:Map<Int, Bool>; // <Int, Bool>
+		
 //------------------------------------------------------------------------------------------
 		public function new () {
 			super ();
@@ -64,8 +66,57 @@ package objects.mickey;
 			
 			gravity = addEmptyTask ();
 			script = addEmptyTask ();
+			
+			setupDPad ();
 		}
 
+//------------------------------------------------------------------------------------------
+		public function setupDPad ():Void {
+			m_dpadKeys = new Map<Int, Bool> (); // <Int, Bool>
+			
+			//------------------------------------------------------------------------------------------
+			m_levelX.addDPadButtonLeftPressedListener (function ():Void {
+				m_dpadKeys.set (37, true);
+			});
+			
+			m_levelX.addDPadButtonRightPressedListener (function ():Void {
+				m_dpadKeys.set (39, true);
+			});
+			
+			m_levelX.addDPadButtonUpPressedListener (function ():Void {	
+				m_dpadKeys.set (38, true);
+			});
+			
+			m_levelX.addDPadButtonDownPressedListener (function ():Void {
+				m_dpadKeys.set (40, true);
+			});
+			
+			m_levelX.addDPadButtonJumpPressedListener (function ():Void {
+				m_dpadKeys.set (BUTTON_JUMP, true);
+			});
+			
+			//------------------------------------------------------------------------------------------
+			m_levelX.addDPadButtonLeftReleasedListener (function ():Void {	
+				m_dpadKeys.set (37, false);
+			});
+			
+			m_levelX.addDPadButtonRightReleasedListener (function ():Void {	
+				m_dpadKeys.set (39, false);
+			});
+			
+			m_levelX.addDPadButtonUpReleasedListener (function ():Void {
+				m_dpadKeys.set (38, false);
+			});
+			
+			m_levelX.addDPadButtonDownReleasedListener (function ():Void {	
+				m_dpadKeys.set (40, false);
+			});
+			
+			m_levelX.addDPadButtonJumpReleasedListener (function ():Void {
+				m_dpadKeys.set (BUTTON_JUMP, false);
+			});
+		}
+		
 //------------------------------------------------------------------------------------------
 		public function freePlayMode (__pos:XPoint, __direction:Float):Void {		
 			setPos (new XPoint (__pos.x, __pos.y));
@@ -98,6 +149,10 @@ package objects.mickey;
 //------------------------------------------------------------------------------------------
 		public function getKeyCode (__key:Int):Bool {
 			if (G.app.isGameMouseEventsAllowed ()) {
+				if (m_dpadKeys.get (__key)) {
+					return true;
+				}
+				
 				return xxx.getKeyCode (__key);
 			}
 			else

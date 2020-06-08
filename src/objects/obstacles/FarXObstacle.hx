@@ -61,6 +61,17 @@ package objects.obstacles;
 			m_selectedSignal = createXSignal ();
 		}
 		
+		//------------------------------------------------------------------------------------------
+		public override function cleanup ():Void {
+			super.cleanup ();
+			
+			stage.removeEventListener (MouseEvent.MOUSE_OVER, onMouseOver);
+			stage.removeEventListener (MouseEvent.MOUSE_DOWN, onMouseDown);
+			stage.removeEventListener (MouseEvent.MOUSE_MOVE, onMouseMove);
+			stage.removeEventListener (MouseEvent.MOUSE_UP, onMouseUp);
+			stage.removeEventListener (MouseEvent.MOUSE_OUT, onMouseOut);
+		}
+		
 //------------------------------------------------------------------------------------------
 		public function setupProps (__minScale:Float, __maxScale:Float):Void {		
 			addTask ([
