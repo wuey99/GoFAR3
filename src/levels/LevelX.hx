@@ -733,6 +733,17 @@ package levels;
 			
 //------------------------------------------------------------------------------------------				
 			script.gotoTask ([
+				/*
+				function ():Void {
+					createWinX ();
+				},
+				
+				XTask.LABEL, "wait",
+					XTask.WAIT, 0x0100,
+					
+					XTask.GOTO, "wait",
+				*/
+				
 				function ():Void {		
 					var __splash:SplashX = cast xxx.getXLogicManager ().initXLogicObject (
 						// parent

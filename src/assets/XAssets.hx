@@ -184,6 +184,10 @@ package assets;
 		"<classX name=\"StartButtonClass\"/>" +
 		"<classX name=\"PointyArrowClass\"/>" +
 		"<classX name=\"SamplePlanClass\"/>" +
+		"<classX name=\"FireworksParticle_Yellow\"/>" +
+		"<classX name=\"FireworksParticle_Red\"/>" +
+		"<classX name=\"FireworksParticle_Green\"/>" +
+		"<classX name=\"FireworksParticle_Blue\"/>" +
 		"</resource>" +
 		
 		"<resource name=\"CharacterStanding\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"character_standing.fla\" dst=\"character_standing.swf\">" +

@@ -124,9 +124,9 @@ package objects.win;
 				// item, layer, depth
 					null, 0, 1600,
 				// x, y, z
-					420, 400, 0,
+					0, 0, 0,
 				// scale, rotation
-					1.05, 0
+					1.0, 0
 				) /* as FireworksX */;
 				
 			addXLogicObject (m_fireworks);
