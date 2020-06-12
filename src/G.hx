@@ -14,8 +14,9 @@ package;
 		public static var cameraY:Float;
 		public static var m_gameMode:Int;
 		
-		public static var SCREEN_WIDTH:Float = 962;
+		public static var SCREEN_WIDTH:Float = 1060;
 		public static var SCREEN_HEIGHT:Float = 600;
+		public static var LEFT_MARGIN:Float = 0;
 		
 		public static var GAMEMODE_PLANNING:Int = 1;
 		public static var GAMEMODE_PLAYING:Int = 2;

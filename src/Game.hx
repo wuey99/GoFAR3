@@ -113,7 +113,7 @@ package;
 			
 			m_panelMask = new Sprite ();	
 			m_panelMask.graphics.beginFill (0xFFFFFF);
-			m_panelMask.graphics.drawRect (0, 0, 962, 600);	
+			m_panelMask.graphics.drawRect (0, 0, G.SCREEN_WIDTH, G.SCREEN_HEIGHT);	
 			mask = m_panelMask;
 			addChild (m_panelMask);
 			

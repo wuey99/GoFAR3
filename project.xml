@@ -9,7 +9,7 @@
 	<app main="Main" file="GoFAR3" path="bin" />
 	
 	<window background="#000000" fps="60" />
-	<window width="962" height="600" unless="mobile" />
+	<window width="1060" height="600" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
 	<source path="src" />

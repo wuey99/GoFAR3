@@ -65,6 +65,7 @@ package ;
 		private var m_currLevel:Int;
 		private var m_currSetting:Int;
 		private var m_winController:XLogicObject;
+		private var m_dpadTrayObject:DPadTrayX;
 		
 //------------------------------------------------------------------------------------------
 		public function new () {
@@ -120,13 +121,28 @@ package ;
 				// item, layer, depth
 					null, 0, 2000,
 				// x, y, z
-					0, 0, 0,
+					G.LEFT_MARGIN, 0, 0,
 				// scale, rotation
 					1.0, 0
 				) /* as MainInterfaceX */;
 					
 			addXLogicObject (m_mainInterface);
-					
+
+			m_dpadTrayObject = cast xxx.getXLogicManager ().initXLogicObject (
+				// parent
+				this,
+				// logicObject
+				new DPadTrayX () /* as XLogicObject */,
+				// item, layer, depth
+				null, 0, 999999 - 1,
+				// x, y, z
+				962, 0, 0,
+				// scale, rotation
+				1.0, 0
+			) /* as DPadTrayX */;
+			
+			addXLogicObject (m_dpadTrayObject);
+			
 			m_planTrayObject = cast xxx.getXLogicManager ().initXLogicObject (
 				// parent
 					this,
@@ -135,7 +151,7 @@ package ;
 				// item, layer, depth
 					null, 0, 8000,
 				// x, y, z
-					0, 480, 0,
+					G.LEFT_MARGIN, 480, 0,
 				// scale, rotation
 					1.0, 0
 				) /* as PlanTrayX */;
@@ -150,7 +166,7 @@ package ;
 				// item, layer, depth
 					null, 0, 8000,
 				// x, y, z
-					580, 480, 0,
+					580 + G.LEFT_MARGIN, 480, 0,
 				// scale, rotation
 					1.0, 0
 				) /* as DialogTrayX */;
@@ -165,7 +181,7 @@ package ;
 				// item, layer, depth
 					null, 0, 4000,
 				// x, y, z
-					864, 96, 0,
+					864 + G.LEFT_MARGIN, 96, 0,
 				// scale, rotation
 					1.0, 0
 				) /* as ProgressBarX */;
@@ -180,7 +196,7 @@ package ;
 				// item, layer, depth
 					null, 0, 10000,
 				// x, y, z
-					864, 96, 0,
+					864 + G.LEFT_MARGIN, 96, 0,
 				// scale, rotation
 					1.0, 0
 				) /* as ProgressBarFGX */;
@@ -195,7 +211,7 @@ package ;
 				// item, layer, depth
 					null, 0, 4000,
 				// x, y, z
-					864, 0, 0,
+					864 + G.LEFT_MARGIN, 0, 0,
 				// scale, rotation
 					1.0, 0
 				) /* as ScoreAndOptionsX */;
@@ -259,7 +275,7 @@ package ;
 				// item, layer, depth
 					null, 0, 500,
 				// x, y, z
-					-48, -96, 0,
+					-48 + G.LEFT_MARGIN, -96, 0,
 				// scale, rotation
 					1.0, 0,
 					[
@@ -282,7 +298,7 @@ package ;
 				// item, layer, depth
 					null, 0, 500,
 				// x, y, z
-					-48, -96, 0,
+					-48 + G.LEFT_MARGIN, -96, 0,
 				// scale, rotation
 					1.0, 0,
 					[
@@ -305,7 +321,7 @@ package ;
 				// item, layer, depth
 					null, 0, 500,
 				// x, y, z
-					-48, -96, 0,
+					-48 + G.LEFT_MARGIN, -96, 0,
 				// scale, rotation
 					1.0, 0,
 					[

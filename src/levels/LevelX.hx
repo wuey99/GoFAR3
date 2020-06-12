@@ -94,7 +94,7 @@ package levels;
 				G.app.getXSoundTaskManager (), G.app.getOldSoundManager ()
 			);
 			
-			createDPadButtons (96, 550);
+			createDPadButtons (962 + 100, 192);
 		}
 
 //------------------------------------------------------------------------------------------
@@ -1449,6 +1449,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonLeft);
 		
+		__y += 100;
+		
 		m_dpadButtonRight = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
 			self,
@@ -1457,7 +1459,7 @@ package levels;
 			// item, layer, depth
 			null, 0, 999999,
 			// x, y, z
-			__x + 100, __y, 0,
+			__x, __y, 0,
 			// scale, rotation
 			1.0, 0,
 			[
@@ -1467,6 +1469,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonRight);
 		
+		__y += 100;
+		
 		m_dpadButtonUp = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
 			self,
@@ -1475,7 +1479,7 @@ package levels;
 			// item, layer, depth
 			null, 0, 999999,
 			// x, y, z
-			__x + 200, __y, 0,
+			__x, __y, 0,
 			// scale, rotation
 			1.0, 0,
 			[
@@ -1485,6 +1489,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonUp);
 		
+		__y += 100;
+		
 		m_dpadButtonDown = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
 			self,
@@ -1493,7 +1499,7 @@ package levels;
 			// item, layer, depth
 			null, 0, 999999,
 			// x, y, z
-			__x + 300, __y, 0,
+			__x, __y, 0,
 			// scale, rotation
 			1.0, 0,
 			[
@@ -1503,6 +1509,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonDown);
 		
+		__y += 100;
+		
 		m_dpadButtonJump = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
 			self,
@@ -1511,7 +1519,7 @@ package levels;
 			// item, layer, depth
 			null, 0, 999999,
 			// x, y, z
-			__x + 400, __y, 0,
+			__x, __y, 0,
 			// scale, rotation
 			1.0, 0,
 			[
@@ -1520,6 +1528,8 @@ package levels;
 		) /* as DPadButtonJumpX */;
 		
 		addXLogicObject (m_dpadButtonJump);
+		
+		__y += 100;
 	}
 
 //------------------------------------------------------------------------------------------

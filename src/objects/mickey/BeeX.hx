@@ -567,11 +567,11 @@ package objects.mickey;
 								gravity.gotoTask (getGravityTaskX (DECCEL));	
 								
 								if (oScaleX < 0) {
-									Bee_Jump_Script (-10, -12);
+									// Bee_Jump_Script (-10, -12);
 								}
 								else
 								{
-									Bee_Jump_Script (10, -12);
+									// Bee_Jump_Script (10, -12);
 								}	
 							}
 						},
