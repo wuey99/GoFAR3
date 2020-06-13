@@ -45,6 +45,8 @@ package ;
 	import kx.world.sprite.*;
 	import kx.world.ui.*;
 	
+	import nx.touch.*;
+	
 	import openfl.display.*;
 	import openfl.geom.*;
 	import openfl.text.*;
@@ -66,7 +68,7 @@ package ;
 		private var m_currSetting:Int;
 		private var m_winController:XLogicObject;
 		private var m_dpadTrayObject:DPadTrayX;
-		
+
 //------------------------------------------------------------------------------------------
 		public function new () {
 			super ();
@@ -94,7 +96,7 @@ package ;
 			addTask ([
 				XTask.WAIT, 0x0400,
 				
-				function ():Void {
+				function ():Void {	
 					initLevel ();
 					
 //					loadLevel ();

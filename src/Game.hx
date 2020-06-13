@@ -38,6 +38,8 @@ package;
 	import kx.world.logic.*;
 	import kx.world.ui.*;
 	
+	import nx.touch.*;
+	
 	//------------------------------------------------------------------------------------------
 	class Game extends Sprite {
 		private var m_XApp:XApp;
@@ -50,6 +52,7 @@ package;
 		private var m_gameMouseEvents:Int;
 		public var m_XSoundTaskManager:XSoundTaskManager;
 		public var m_XSoundManager:XOldSoundManager;
+		private var m_touchManager:XTouchManager;	
 		
 		public static var m_cumalativeScore:Int = 0;	
 		
@@ -137,7 +140,9 @@ package;
 				
 				function ():Void {	
 					trace (": ---------------->: xyzzy: ", xxx.getClass ("Assets:Level001_AClass"));
-					
+					m_touchManager = new XTouchManager ();
+					m_touchManager.setup (m_XApp, xxx);
+				
 					initGameController ();
 				},
 				
@@ -176,6 +181,11 @@ package;
 			);
 			
 			t.finish ();
+		}
+		
+		//------------------------------------------------------------------------------------------
+		public function getTouchManager ():XTouchManager {
+			return m_touchManager;
 		}
 		
 		//------------------------------------------------------------------------------------------
