@@ -193,6 +193,9 @@ package assets;
 		"<classX name=\"DPadUpClass\"/>" +
 		"<classX name=\"DPadDownClass\"/>" +
 		"<classX name=\"DPadJumpClass\"/>" +
+		"<classX name=\"Progress_F\"/>" +
+		"<classX name=\"Progress_A\"/>" +
+		"<classX name=\"Progress_R\"/>" +
 		"</resource>" +
 		
 		"<resource name=\"CharacterStanding\" type=\".fla=\" path=\"$FAR\\Embedded\" src=\"character_standing.fla\" dst=\"character_standing.swf\">" +

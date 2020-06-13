@@ -19,6 +19,9 @@ package interfaces;
 		public var x_sprite:XDepthSprite;
 		public var m_sprite:Sprite;
 		public var m_progressBarMiddleObject:ProgressBarMiddleX;
+		public var m_progressF:ProgressLetterX;
+		public var m_progressA:ProgressLetterX;
+		public var m_progressR:ProgressLetterX;
 		
 //------------------------------------------------------------------------------------------
 		public function new () {
@@ -66,7 +69,61 @@ package interfaces;
 			addXLogicObject (m_progressBarMiddleObject);
 			
 			setProgress (0.0);
-									
+			
+			m_progressF = cast xxx.getXLogicManager ().initXLogicObject (
+				// parent
+					this,
+				// logicObject
+					new ProgressLetterX () /* as XLogicObject */,
+				// item, layer, depth
+					null, 0, getDepth () + 9999,
+				// x, y, z
+					48, 325, 0,
+				// scale, rotation
+					1.0, 0,
+					[
+						"F"
+					]
+				) /* as ProgressLetterX */;
+				
+			addXLogicObject (m_progressF);
+			
+			m_progressA = cast xxx.getXLogicManager ().initXLogicObject (
+				// parent
+					this,
+				// logicObject
+					new ProgressLetterX () /* as XLogicObject */,
+				// item, layer, depth
+					null, 0, getDepth () + 9999,
+				// x, y, z
+					48, 200, 0,
+				// scale, rotation
+					1.0, 0,
+					[
+						"A"
+					]
+				) /* as ProgressLetterX */;
+				
+			addXLogicObject (m_progressA);
+			
+			m_progressR = cast xxx.getXLogicManager ().initXLogicObject (
+				// parent
+					this,
+				// logicObject
+					new ProgressLetterX () /* as XLogicObject */,
+				// item, layer, depth
+					null, 0, getDepth () + 9999,
+				// x, y, z
+					48, 75, 0,
+				// scale, rotation
+					1.0, 0,
+					[
+						"R"
+					]
+				) /* as ProgressLetterX */;
+				
+			addXLogicObject (m_progressR);
+			
 			show ();
 		}
 

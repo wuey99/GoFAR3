@@ -27,6 +27,10 @@
 	<assets path="src/assets/sounds2" rename="sounds" />
 	<assets path="src/assets" rename="fonts" include="*.ttf" />
 
+
+	<haxedef name="dpad_overlay" value="0" />
+	<haxedef name="dpad_right" value="1" />
+	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->
 	

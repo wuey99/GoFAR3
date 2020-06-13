@@ -67,7 +67,7 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					52, -12, 0,
+					36, -24, 0,
 				// scale, rotation
 					1.0, 0,
 					[
@@ -85,7 +85,7 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					52, 28, 0,
+					36, 32, 0,
 				// scale, rotation
 					1.0, 0,
 					[
@@ -115,8 +115,8 @@ package interfaces;
 				setText (m_selectionArray[m_selectionIndex]);
 			}
 			
-			m_upArrowButton.addMouseUpListener (__up);
-			m_downArrowButton.addMouseUpListener (__down);
+			m_upArrowButton.addMouseUpListener (__down);
+			m_downArrowButton.addMouseUpListener (__up);
 		}
   		
  //------------------------------------------------------------------------------------------

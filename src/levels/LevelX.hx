@@ -94,7 +94,13 @@ package levels;
 				G.app.getXSoundTaskManager (), G.app.getOldSoundManager ()
 			);
 			
-			createDPadButtons (962 + 100, 192);
+			#if (dpad_right > 0)
+				createDPadButtons (962 + 100, 192, 0, 100, 1.0);
+			#end
+				
+			#if (dpad_overlay > 0) 
+				createDPadButtons (100, 550, 100, 0, 0.75);
+			#end
 		}
 
 //------------------------------------------------------------------------------------------
@@ -1430,7 +1436,7 @@ package levels;
 		}
 
 //------------------------------------------------------------------------------------------
-	public function createDPadButtons (__x:Float, __y:Float):Void {
+	public function createDPadButtons (__x:Float, __y:Float, __nextX:Float, __nextY:Float, __alpha:Float = 1.0):Void {
 		m_dpadButtonLeft = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
 			self,
@@ -1441,7 +1447,7 @@ package levels;
 			// x, y, z
 			__x, __y, 0,
 			// scale, rotation
-			1.0, 0,
+			1.0, __alpha,
 			[
 				self
 			]
@@ -1449,7 +1455,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonLeft);
 		
-		__y += 100;
+		__x += __nextX;
+		__y += __nextY;
 		
 		m_dpadButtonRight = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
@@ -1461,7 +1468,7 @@ package levels;
 			// x, y, z
 			__x, __y, 0,
 			// scale, rotation
-			1.0, 0,
+			1.0, __alpha,
 			[
 				self
 			]
@@ -1469,7 +1476,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonRight);
 		
-		__y += 100;
+		__x += __nextX;
+		__y += __nextY;
 		
 		m_dpadButtonUp = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
@@ -1481,7 +1489,7 @@ package levels;
 			// x, y, z
 			__x, __y, 0,
 			// scale, rotation
-			1.0, 0,
+			1.0, __alpha,
 			[
 				self
 			]
@@ -1489,7 +1497,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonUp);
 		
-		__y += 100;
+		__x += __nextX;
+		__y += __nextY;
 		
 		m_dpadButtonDown = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
@@ -1501,7 +1510,7 @@ package levels;
 			// x, y, z
 			__x, __y, 0,
 			// scale, rotation
-			1.0, 0,
+			1.0, __alpha,
 			[
 				self
 			]
@@ -1509,7 +1518,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonDown);
 		
-		__y += 100;
+		__x += __nextX;
+		__y += __nextY;
 		
 		m_dpadButtonJump = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
@@ -1521,7 +1531,7 @@ package levels;
 			// x, y, z
 			__x, __y, 0,
 			// scale, rotation
-			1.0, 0,
+			1.0, __alpha,
 			[
 				self
 			]
@@ -1529,7 +1539,8 @@ package levels;
 		
 		addXLogicObject (m_dpadButtonJump);
 		
-		__y += 100;
+		__x += __nextX;
+		__y += __nextY;
 	}
 
 //------------------------------------------------------------------------------------------
