@@ -2,7 +2,6 @@
 package interfaces;
 	
 	import assets.*;
-	import nx.touch.XTouchTracker;
 	
 	import openfl.display.*;
 	import openfl.events.*;
@@ -20,6 +19,8 @@ package interfaces;
 	import kx.world.collision.*;
 	import kx.world.logic.*;
 	import kx.world.sprite.*;
+	
+	import nx.touch.XTouchTracker;
 	
 	import levels.*;
 	
@@ -212,7 +213,6 @@ package interfaces;
 			
 			m_releasedSignal.fireSignal (this);
 		}
-		
 		
 		//------------------------------------------------------------------------------------------	
 		public function setCursorPosFromMouse (e:MouseEvent):Void {
