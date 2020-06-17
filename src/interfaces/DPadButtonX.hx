@@ -206,6 +206,8 @@ package interfaces;
 		
 		//------------------------------------------------------------------------------------------
 		public function fireReleasedSignal ():Void {
+			oScale = 1.0;
+			
 			m_releasedSignal.fireSignal (this);
 		}
 		
@@ -328,6 +330,10 @@ package interfaces;
 				m_mouseDown = false;
 			}
 			#end
+			
+			fireReleasedSignal ();
+			
+			return;
 			
 			if (hasTouches () == false && m_prev == true) {
 				fireReleasedSignal ();
