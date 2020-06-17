@@ -248,7 +248,7 @@ package ;
 				addXLogicObject (m_optionsDialogBox);
 			}		
 		}
-		
+
 //------------------------------------------------------------------------------------------
 		public function loadLevel ():Void {
 			var __levelTable:Array<Class<Dynamic>> /* <Class<Dynamic>> */ = [
@@ -476,7 +476,12 @@ package ;
 				
 			m_winController.show ();
 		}
-					
+				
+//------------------------------------------------------------------------------------------
+		public function getWinCloudController ():XLogicObject {
+			return m_winController;
+		}
+		
 //------------------------------------------------------------------------------------------
 	}
 

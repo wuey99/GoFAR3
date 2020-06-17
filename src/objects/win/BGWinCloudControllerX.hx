@@ -87,7 +87,7 @@ package objects.win;
 //------------------------------------------------------------------------------------------
 		public override function cleanup ():Void {
 			super.cleanup ();
-			
+				
 			xm.cleanup ();
 		}
 		
@@ -118,7 +118,7 @@ package objects.win;
 		public function createFireworks ():Void {
 			m_fireworks = cast xxx.getXLogicManager ().initXLogicObject (
 				// parent
-					null,
+					self,
 				// logicObject
 					new FireworksX () /* as XLogicObject */,
 				// item, layer, depth

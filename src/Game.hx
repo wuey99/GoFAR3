@@ -247,6 +247,11 @@ package;
 		public function setCurrLevel (__level:Int):Void {
 			m_gameController.setCurrLevel (__level);
 		}
+
+		//------------------------------------------------------------------------------------------
+		public function getTotalLevels ():Int {
+			return 13;
+		}
 		
 		//------------------------------------------------------------------------------------------
 		public function getCurrSetting ():Int {

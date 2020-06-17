@@ -322,10 +322,12 @@ package interfaces;
 			
 			setCursorPosFromMouse (e);
 			
+			#if true
 			if (isCursorOver ()) {
 				// fireReleasedSignal ();
 				m_mouseDown = false;
 			}
+			#end
 			
 			if (hasTouches () == false && m_prev == true) {
 				fireReleasedSignal ();

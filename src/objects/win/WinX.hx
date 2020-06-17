@@ -55,6 +55,44 @@ package objects.win;
 					G.app.getGameController ().createWinCloudController ();
 				},
 				
+				XTask.WAIT1000, 5 * 1000,
+				
+				function ():Void {
+					var __level:Int = G.app.getCurrLevel ();
+					
+					if (__level < G.app.getTotalLevels () - 1) {
+						G.app.setCurrLevel (__level + 1);
+						
+						var nextButtonObject:NextButtonX = cast xxx.getXLogicManager ().initXLogicObject (
+							// parent
+							null,
+							// logicObject
+							new NextButtonX () /* as XLogicObject */,
+							// item, layer, depth
+							null, 0, 999999,
+							// x, y, z
+							962/2 - 50, 600/2 - 50, 0,
+							// scale, rotation
+							1.0, __alpha,
+							[
+								self
+							]
+						);
+						
+						nextButtonObject.addPressedListener (function ():Void {
+							trace (": next pressed: ");
+							
+							G.app.getGameController ().getWinCloudController ().nukeLater ();
+													
+							G.app.loadLevel ();
+							
+							nextButtonObject.nukeLater ();
+							
+							nukeLater ();
+						});
+					}
+				},
+				
 				XTask.RETN,
 			]);
 		}

@@ -101,6 +101,8 @@ package levels;
 			#if (dpad_overlay > 0) 
 				createDPadButtons (100, 550, 100, 0, 0.75);
 			#end
+			
+			hideDPadButtons ();
 		}
 
 //------------------------------------------------------------------------------------------
@@ -888,7 +890,7 @@ package levels;
 				function ():Void {
 					G.app.setMessage ("");
 				},
-				
+						
 				function ():Void {
 					doLevelPlayingSFX ();
 					
@@ -933,6 +935,10 @@ package levels;
 													
 										function ():Void {
 											G.app.setSoundPlaying (false);
+										},
+										
+										function ():Void {
+											showDPadButtons ();
 										},
 										
 										XTask.RETN,
@@ -1034,6 +1040,10 @@ package levels;
 								__soundDone = true;
 								
 								G.app.setSoundPlaying (false);
+							},
+							
+							function ():Void {
+								hideDPadButtons ();
 							},
 							
 							XTask.RETN,
@@ -1457,7 +1467,7 @@ package levels;
 		
 		__x += __nextX;
 		__y += __nextY;
-		
+			
 		m_dpadButtonRight = cast xxx.getXLogicManager ().initXLogicObject (
 			// parent
 			self,
@@ -1543,6 +1553,24 @@ package levels;
 		__y += __nextY;
 	}
 
+//------------------------------------------------------------------------------------------
+		public function showDPadButtons ():Void {
+			m_dpadButtonLeft.show ();
+			m_dpadButtonRight.show ();
+			m_dpadButtonUp.show ();
+			m_dpadButtonDown.show ();
+			m_dpadButtonJump.show ();
+		}
+	
+//------------------------------------------------------------------------------------------
+		public function hideDPadButtons ():Void {
+			m_dpadButtonLeft.hide ();
+			m_dpadButtonRight.hide ();
+			m_dpadButtonUp.hide ();
+			m_dpadButtonDown.hide ();
+			m_dpadButtonJump.hide ();
+		}
+		
 //------------------------------------------------------------------------------------------
 		public function addDPadButtonUpPressedListener (__listener:Dynamic /* Function */):Void {	
 			if (m_dpadButtonUp != null) {

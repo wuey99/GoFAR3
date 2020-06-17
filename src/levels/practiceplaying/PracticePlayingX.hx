@@ -330,7 +330,7 @@ var CMapArray:Array<Int> = [ // <Int>
 						XTask.RETN,
 					]);
 				},
-				
+
 				function ():Void {
 					G.app.getBee ().freePlayMode (getBeeStartingPos (), getBeeStartingDirection ());
 						
@@ -505,6 +505,10 @@ var CMapArray:Array<Int> = [ // <Int>
 					m_playingStage = 0;
 					
 					G.app.allowGameMouseEvents ();
+				},
+				
+				function ():Void {
+					showDPadButtons ();
 				},
 				
 				XTask.FUNC, function (__task:XSoundTask):Void {
