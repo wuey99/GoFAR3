@@ -828,7 +828,9 @@ package levels;
 						}
 						else
 						{
-							__planningIncorrect ();
+							if (__currIndex < m_plans.length) {
+								__planningIncorrect ();
+							}
 						}
 					},
 					

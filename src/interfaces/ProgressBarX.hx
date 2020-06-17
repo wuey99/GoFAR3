@@ -70,6 +70,7 @@ package interfaces;
 			
 			setProgress (0.0);
 			
+			#if false
 			m_progressF = cast xxx.getXLogicManager ().initXLogicObject (
 				// parent
 					this,
@@ -123,6 +124,7 @@ package interfaces;
 				) /* as ProgressLetterX */;
 				
 			addXLogicObject (m_progressR);
+			#end
 			
 			show ();
 		}

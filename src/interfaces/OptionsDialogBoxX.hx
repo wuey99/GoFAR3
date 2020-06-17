@@ -96,9 +96,9 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x, y, 0,
+					x - 64, y, 0,
 				// scale, rotation
-					1.0, 0,
+					2.0, 0,
 					[
 						"Assets:PracticePlanningButtonClass"
 					]
@@ -116,9 +116,9 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x, y, 0,
+					x - 64, y, 0,
 				// scale, rotation
-					1.0, 0,
+					2.0, 0,
 					[
 						"Assets:PracticeActionButtonClass"
 					]
@@ -136,9 +136,9 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x, y, 0,
+					x - 64, y, 0,
 				// scale, rotation
-					1.0, 0,
+					2.0, 0,
 					[
 						"Assets:PlayLevelButtonClass"
 					]
@@ -154,7 +154,7 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x+128, y, 0,
+					x+128+64, y + 16, 0,
 				// scale, rotation
 					1.0, 0,
 					[
@@ -174,7 +174,7 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x+256, y, 0,
+					x+256+64, y + 16, 0,
 				// scale, rotation
 					1.0, 0,
 					[
