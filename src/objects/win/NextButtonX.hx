@@ -211,7 +211,7 @@ package objects.win;
 		
 		//------------------------------------------------------------------------------------------	
 		public function setCursorPosFromMouse (e:MouseEvent):Void {
-			var __p:Point = m_winX.globalToLocal (new XPoint (e.stageX, e.stageY));
+			var __p:Point = m_winX.globalToLocal (new XPoint (e.stageX,  e.stageY));
 			
 			m_cursor = m_mouse = new XPoint (__p.x, __p.y);	
 		}
@@ -225,7 +225,7 @@ package objects.win;
 		
 		//------------------------------------------------------------------------------------------
 		public function isCursorOver ():Bool {
-			var __rect:XRect = new XRect (oX - 50, oY - 50, 100, 100);
+			var __rect:XRect = new XRect (oX - 100, oY - 100, 200, 200);
 			
 			// trace (": isCursorOver: ", m_cursor, oX, oY, __rect);
 			

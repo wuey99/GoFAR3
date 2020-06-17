@@ -54,7 +54,7 @@ package interfaces;
 		public override function createSprites ():Void {
 
 			m_selectionText = new XTextSprite ();
-			x_selectionText = addSpriteAt (m_selectionText, 0, 0);
+			x_selectionText = addSpriteAt (m_selectionText, -12, -8);
 			x_selectionText.setDepth (getDepth () + 5);
 			
 			setText (m_selectionArray[m_selectionIndex]);
@@ -67,9 +67,9 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					36, -24, 0,
+					36, -32, 0,
 				// scale, rotation
-					1.0, 0,
+					1.5, 0,
 					[
 						"Assets:UpButtonClass"
 					]
@@ -85,9 +85,9 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					36, 32, 0,
+					36, 40, 0,
 				// scale, rotation
-					1.0, 0,
+					1.5, 0,
 					[
 						"Assets:DownButtonClass"
 					]

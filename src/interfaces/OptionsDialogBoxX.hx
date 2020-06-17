@@ -154,7 +154,7 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x+128+64, y + 16, 0,
+					x+128+48, y, 0,
 				// scale, rotation
 					1.0, 0,
 					[
@@ -174,7 +174,7 @@ package interfaces;
 				// item, layer, depth
 					null, 0, getDepth () + 5,
 				// x, y, z
-					x+256+64, y + 16, 0,
+					x+256+48, y, 0,
 				// scale, rotation
 					1.0, 0,
 					[

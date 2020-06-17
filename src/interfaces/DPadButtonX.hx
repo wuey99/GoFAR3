@@ -89,6 +89,7 @@ package interfaces;
 				function ():Void {
 					#if true
 					stage.addEventListener (MouseEvent.MOUSE_OVER, onMouseOver, false, 0, true);
+					stage.addEventListener (MouseEvent.CLICK, onMouseClick, false, 0, true);
 					stage.addEventListener (MouseEvent.MOUSE_DOWN, onMouseDown, false, 0, true);
 					stage.addEventListener (MouseEvent.MOUSE_MOVE, onMouseMove, false, 0, true);
 					stage.addEventListener (MouseEvent.MOUSE_UP, onMouseUp, false, 0, true);
@@ -147,6 +148,7 @@ package interfaces;
 			
 			#if true
 			stage.removeEventListener (MouseEvent.MOUSE_OVER, onMouseOver);
+			stage.removeEventListener (MouseEvent.CLICK, onMouseClick);
 			stage.removeEventListener (MouseEvent.MOUSE_DOWN, onMouseDown);
 			stage.removeEventListener (MouseEvent.MOUSE_MOVE, onMouseMove);
 			stage.removeEventListener (MouseEvent.MOUSE_UP, onMouseUp);
@@ -300,6 +302,23 @@ package interfaces;
 			isCursorOver ();
 			
 			hasTouches ();
+		}	
+		
+		//------------------------------------------------------------------------------------------		
+		public function onMouseClick (e:MouseEvent):Void {
+			if (isCursorOver ()) {
+				firePressedSignal ();
+			}
+			
+			addTask ([
+				XTask.WAIT, 0x0200,
+				
+				function ():Void {
+					fireReleasedSignal ();
+				},
+				
+				XTask.RETN,
+			]);
 		}	
 		
 		//------------------------------------------------------------------------------------------		
