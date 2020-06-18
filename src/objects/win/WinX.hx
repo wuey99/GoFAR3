@@ -36,7 +36,27 @@ package objects.win;
 		public override function setupX ():Void {
 			super.setupX ();
 
+			var __finished:Bool = false;
+			var nextButtonObject:NextButtonX = null;	
 			var __iris:IrisEffectX;
+			
+			function __advance ():Void {
+				if (!__finished) {
+					G.app.getGameController ().getWinCloudController ().nukeLater ();
+														
+					G.app.loadLevel ();
+								
+					if (nextButtonObject != null) {
+						nextButtonObject.nukeLater ();
+						
+						nextButtonObject = null;
+					}
+					
+					nukeLater ();	
+					
+					__finished = true;
+				}
+			}
 			
 			addTask ([	
 				function ():Void {
@@ -63,7 +83,7 @@ package objects.win;
 					if (__level < G.app.getTotalLevels () - 1) {
 						G.app.setCurrLevel (__level + 1);
 						
-						var nextButtonObject:NextButtonX = cast xxx.getXLogicManager ().initXLogicObject (
+						nextButtonObject = cast xxx.getXLogicManager ().initXLogicObject (
 							// parent
 							null,
 							// logicObject
@@ -82,15 +102,15 @@ package objects.win;
 						nextButtonObject.addPressedListener (function ():Void {
 							trace (": next pressed: ");
 							
-							G.app.getGameController ().getWinCloudController ().nukeLater ();
-													
-							G.app.loadLevel ();
-							
-							nextButtonObject.nukeLater ();
-							
-							nukeLater ();
+							__advance ();
 						});
 					}
+				},
+				
+				XTask.WAIT1000, 10 * 1000,
+				
+				function ():Void {
+					__advance ();
 				},
 				
 				XTask.RETN,
