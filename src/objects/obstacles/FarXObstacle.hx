@@ -48,6 +48,8 @@ package objects.obstacles;
 		private var m_mouseDown:Bool;
 		private var m_prev:Bool;
 		
+		private var m_fired:Int;
+		
 //------------------------------------------------------------------------------------------
 		public function new () {
 			super ();
@@ -70,7 +72,24 @@ package objects.obstacles;
 		
 			mouseEnabled = true;
 			
+			m_fired = 0;
+			
 			m_selectedSignal = createXSignal ();
+			
+			addTask ([
+				XTask.LABEL, "loop",
+					XTask.WAIT, 0x0100,
+					
+					function ():Void {
+						if (m_fired > 0) {
+							m_fired--;
+						}
+					},
+					
+					XTask.GOTO, "loop",
+					
+				XTask.RETN,
+			]);
 		}
 		
 		//------------------------------------------------------------------------------------------
@@ -185,7 +204,11 @@ package objects.obstacles;
 		
 //------------------------------------------------------------------------------------------
 		public function fireSelectedSignal ():Void {
-			m_selectedSignal.fireSignal (m_planModel);
+			if (m_fired == 0) {
+				m_selectedSignal.fireSignal (m_planModel);
+				
+				m_fired = 16;
+			}
 		}
 
 //------------------------------------------------------------------------------------------
