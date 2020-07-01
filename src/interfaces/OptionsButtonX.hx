@@ -39,6 +39,7 @@ package interfaces;
 //------------------------------------------------------------------------------------------
 // create sprite
 //------------------------------------------------------------------------------------------
+		#if false
 		public override function createSprites ():Void {			
 			m_sprite = XType.createInstance (xxx.getClass (m_buttonClassName));
 					
@@ -48,7 +49,8 @@ package interfaces;
 			
 			show ();
 		}
-
+		#end
+		
 //------------------------------------------------------------------------------------------
 	}
 

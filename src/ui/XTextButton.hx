@@ -22,6 +22,10 @@ package ui;
 		private var m_text:XTextSprite;
 		private var m_tf:TextFormat;
 		private var m_buttonName:String;	
+		private	var m_fontName:String;
+		private var m_fontSize:Int;
+		private var m_textWidth:Float;
+		private var m_textHeight:Float;
 		private var m_mouseUpSignal:XSignal;
 		private var m_disabledFlag:Bool;
 		
@@ -37,7 +41,11 @@ package ui;
 			super.setup (__xxx, args);
 			
 			m_buttonName = getArg (args, 0);
-	
+			m_fontName = getArg (args, 1);
+			m_fontSize = getArg (args, 2);
+			m_textWidth = getArg (args, 3);
+			m_textHeight = getArg (args, 4);
+			
 			m_mouseUpSignal = new XSignal ();
 			
 			createSprites ();
@@ -113,7 +121,6 @@ package ui;
 //------------------------------------------------------------------------------------------
 		public override function createSprites ():Void {
 			createTextSprite ();
-               			
 			addSpriteAt (m_text, 0, 0);
 			
 			m_text.scaleX = 1.0;
@@ -129,11 +136,13 @@ package ui;
 			m_text.getTextField ().selectable = false;
 			m_text.getTextField ().multiline = false;
 			m_text.getTextField ().wordWrap = false;
-//			m_text.getTextField ().embedFonts = true;
+			m_text.getTextField ().embedFonts = true;
             m_tf = getStandardTextFormat ();
+			m_tf.size = m_fontSize;
+			m_tf.font = m_fontName;
 			m_text.getTextField ().setTextFormat (m_tf);
-			m_text.getTextField ().width = m_text.getTextField ().textWidth + 16;
-			m_text.getTextField ().height = 18;
+			m_text.getTextField ().width = m_textWidth;
+			m_text.getTextField ().height = m_textHeight;
 		}
 
 //------------------------------------------------------------------------------------------

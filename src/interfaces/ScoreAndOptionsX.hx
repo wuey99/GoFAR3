@@ -73,7 +73,11 @@ package interfaces;
 				// scale, rotation
 					1.0, 0,
 					[
-						"Assets:OptionsButtonClass"
+						"Assets:OptionsButtonClass",
+						"Options",
+						10,
+						90, 45,
+						14
 					]
 				) /* as __XButton */;
 				

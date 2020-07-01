@@ -14,6 +14,7 @@ package objects.splash;
 	import kx.world.sprite.*;
 	import kx.world.ui.XButton;
 	
+	import ui.XTextButton;
 	import xlogicobject.*;
 	
 	import openfl.display.*;
@@ -27,7 +28,7 @@ package objects.splash;
 		public var m_textName:String;
 		public var m_textObject:SplashTextX;
 		public var m_doneSignal:XSignal;
-		public var m_startButton:__XButton;
+		public var m_startButton:XTextButton;
 		public var m_irisEffect:IrisEffectX;
 		public var m_blackOut:BlackOutX;
 		public var m_useBlackOut:Bool;
@@ -247,20 +248,24 @@ package objects.splash;
 		private function addStartButton ():Void {
 			m_startButton = cast xxx.getXLogicManager ().initXLogicObject (
 				// parent
-					null,
+					this,
 				// logicObject
-					new __XButton () /* as XLogicObject */,
+					new XTextButton () /* as XLogicObject */,
 				// item, layer, depth
 					null, 0, 20000,
 				// x, y, z
-					966/2-126, 600/2-16, 0,
+					966/2, 600/2 + 64, 0,
 				// scale, rotation
-					2.0, 0,
+					1.0, 0,
 					[
-						"Assets:StartButtonClass"
+						"Start!",
+						"Aller_Rg",
+						40,
+						100,
+						40
 					]
-				) /* as __XButton */;
-	
+				) /* as XTextButton */;
+				
 			addTask ([
 				function ():Void {
 					m_startButton.oAlpha = 0.0;
@@ -278,7 +283,7 @@ package objects.splash;
 					XTask.RETN
 			]);
 						
-//			addXLogicObject (m_startButton);
+			addXLogicObject (m_startButton);
 		}
 	
 //------------------------------------------------------------------------------------------

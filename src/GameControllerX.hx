@@ -379,6 +379,7 @@ package ;
 		}
 		
 //------------------------------------------------------------------------------------------
+		#if false
 		public function initMenu ():Void {
 			var __level001FreePlay:XTextButton;
 			var __level001Planning:XTextButton;
@@ -423,6 +424,7 @@ package ;
 				
 			addXLogicObject (__level001Planning);
 		}
+		#end
 
 //------------------------------------------------------------------------------------------
 		public function getBee ():BeeX {

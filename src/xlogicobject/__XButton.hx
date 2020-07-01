@@ -47,11 +47,19 @@ package xlogicobject;
 		private var m_sprite:MovieClip;
 		private var x_sprite:XDepthSprite;
 		private var m_buttonClassName:String;
+		private var m_buttonText:String;
 		private var m_mouseDownSignal:XSignal;
 		private var m_mouseUpSignal:XSignal;
 		private var m_mouseOutSignal:XSignal;
 		private var m_keyboardDownSignal:XSignal;
 		private var m_keyboardUpSignal:XSignal;
+		
+		public var m_text:XTextSprite;
+		public var x_text:XDepthSprite;
+		public var m_fontSize:Int;
+		public var m_textWidth:Float;
+		public var m_textHeight:Float;
+		public var m_offsetY:Float;
 		
 		public static inline var NORMAL_STATE:Int = 1;
 		public static inline var OVER_STATE:Int = 2;
@@ -75,6 +83,19 @@ package xlogicobject;
 			
 			m_buttonClassName = args[0];
 			
+			m_fontSize = 25;
+			m_textWidth = 32;
+			m_textHeight = 32;
+			m_offsetY = 0;
+			
+			if (args.length > 1) {
+				m_buttonText = args[1];
+				m_fontSize = args[2];
+				m_textWidth = args[3];
+				m_textHeight = args[4];
+				m_offsetY = args[5];
+			}
+			
 			m_mouseDownSignal = createXSignal ();	
 			m_mouseOutSignal = createXSignal ();
 			m_mouseUpSignal = createXSignal ();
@@ -83,7 +104,7 @@ package xlogicobject;
 			
 			createSprites ();
 			
-			m_sprite.mouseEnabled = true;
+			setMouseEnabled ();
 			
 			m_disabledFlag = false;
 			
@@ -101,6 +122,11 @@ package xlogicobject;
 			super.cleanup ();
 			
 			cleanupListeners ();
+		}
+
+		//------------------------------------------------------------------------------------------
+		public function setMouseEnabled ():Void {
+			m_sprite.mouseEnabled = true;	
 		}
 		
 		//------------------------------------------------------------------------------------------
@@ -290,6 +316,26 @@ package xlogicobject;
 		public override function createSprites ():Void {			
 			m_sprite = XType.createInstance (xxx.getClass (m_buttonClassName));
 			x_sprite = addSpriteAt (m_sprite, 0, 0);
+			
+			var font:Font = Assets.getFont ("fonts/Aller_Rg.ttf");
+			
+			if (m_buttonText != null) {
+				m_text = createXTextSprite (
+					m_textWidth, m_textHeight,
+					m_buttonText,
+					font.fontName,
+					m_fontSize,
+					false,
+					true
+				);
+				
+				m_text.hAlign = "center";
+				
+				x_text = addSpriteAt (m_text, 0, -m_offsetY);
+				
+				m_text.mouseEnabled = false;
+				m_text.mouseChildren = false;
+			}
 			
 			__gotoState (NORMAL_STATE);
 			

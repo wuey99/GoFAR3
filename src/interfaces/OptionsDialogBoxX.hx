@@ -100,7 +100,11 @@ package interfaces;
 				// scale, rotation
 					2.0, 0,
 					[
-						"Assets:PracticePlanningButtonClass"
+						"Assets:PracticePlanningButtonClass",
+						"Practice Planning",
+						10,
+						125, 25,
+						4
 					]
 				) /* as __XButton */;
 				
@@ -120,7 +124,11 @@ package interfaces;
 				// scale, rotation
 					2.0, 0,
 					[
-						"Assets:PracticeActionButtonClass"
+						"Assets:PracticeActionButtonClass",
+						"Practice Action",
+						10,
+						125, 25,
+						4
 					]
 				) /* as __XButton */;
 				
@@ -140,7 +148,11 @@ package interfaces;
 				// scale, rotation
 					2.0, 0,
 					[
-						"Assets:PlayLevelButtonClass"
+						"Assets:PlayLevelButtonClass",
+						"Play Level",
+						10,
+						125, 25,
+						4
 					]
 				) /* as __XButton */;
 				
